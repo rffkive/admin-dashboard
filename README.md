@@ -1,3 +1,3 @@
-# odin-new-project
+# TOP-admin-dashboard
 
-This is just a placeholder before starting odin new proiect
+This is a mini project from The Odin Project (TOP)[https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard]
