@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,33 +10,43 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr auto;
+    min-height: 100vh;
+    font-family: "Inter", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .sidebar {
     display: grid;
-    grid-template-rows: 1fr 2fr 8fr;
+    grid-template-rows: auto auto auto 1fr;
     background-color: aquamarine;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .sidebar-title {
-    padding: 0 20px 10px 20px;
+    padding: 20px;
 }
 
 .sidebar-branding {
+    list-style: none;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     gap: 15px;
-    padding: 20px;
-    height: 100%;
+    margin-bottom: 20px;
 }
 
 .sidebar-navigation {
+    list-style: none;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);   
     gap: 15px;
-    padding: 20px;
-    height: 100%;
-    
+}
+
+.sidebar-navigation a, .sidebar-branding a {
+    text-decoration: none;
+
+}
+
+.main-container {
+    height: 100vh;
+    overflow: scroll;
 }
