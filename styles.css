@@ -66,12 +66,21 @@ body {
 .sidebar-navigation a, .sidebar-branding a {
     text-decoration: none;
     color: var(--cream);
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     padding: 7px 15px;
     border-radius: 8px;
     transition: all 0.3s ease;
     font-weight: 500;
     font-size: 18px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: all 0.3s ease;
 }
 
 .sidebar-navigation a:hover, .sidebar-branding a:hover {
