@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Kalam:wght@400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -88,15 +90,16 @@ body {
 .main-container {
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: auto auto repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
 
 .header {
     display: grid;
     grid-template-rows:auto auto;
-    background-color: var(--cream);
+    background-color: white;
     grid-area: 1 / 1 / 2 / 6;
+    padding: 1rem 2rem;
 }
 .search-form {
   display: flex;
@@ -106,31 +109,137 @@ body {
   margin: 0 1rem;
   border-radius: 13px;
   width: 100%;
+  padding: 0.5rem;
+  background-color: rgba(128, 128, 128, 0.2); 
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  color: var(--dark-teal);
 }
 
 .projects-section {
-  grid-area: 2 / 1 / 5 / 4;
-      overflow: scroll;
+  grid-area: 2 / 1 / 5 / 5;
+  overflow: auto;
+  background-color: gray;
 }
 
 .content-sidebar {
-  grid-area: 2 / 4 / 5 / 6;
+  grid-area: 2 / 5 / 5 / 6;
   display: grid;
   grid-template-rows: auto auto;
+  background-color: gray;
 }
 
 .search-section {
     display: grid;
     grid-template-columns: 1fr auto auto auto;
     align-items: center;
-    gap: 20px;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+}
+
+.search-button, .notification-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .welcome-section {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 20px;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+}
+
+.user-profile-btn {
+    position: relative;
+    border-radius: 50%;
+    background: none;
+    border: 3px solid var(--navy);
+    width: 54px;
+    height: 54px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: 2px var(--dark-teal);
+}
+
+.user-profile-btn:hover {
+    padding: 10px;
+    background-color: var(--yellow);
+    border-color: 1px black;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px var(--shadow-hover);
+}
+
+
+.user-profile-btn:hover .profile-image {
+    transform: scale(1.1);
+    border: 2px var(--dark-teal);
+}
+
+.username {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+
+}
+
+.profile-picture {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mini-greetings {
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.profiles {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1em;
+}
+
+.btn {
+    background-color: var(--navy);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 18px;
+    width: 160px;
+    height: 48px;
+    justify-content: center;
+}
+
+.btn:hover {
+    color: var(--dark-teal);
+    font-family: 'Kalam', cursive;
+    font-weight: 600;
+    background-color: var(--yellow);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px var(--shadow-hover);
+    cursor: pointer;
 }
 
 .projects-grid {
@@ -138,9 +247,9 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 .Announcements {
-  overflow: scroll;
+  overflow: auto;
 }
 
 .Trending { 
-  overflow: scroll;
+  overflow: auto;
 }
