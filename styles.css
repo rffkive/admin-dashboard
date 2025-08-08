@@ -7,6 +7,15 @@
     border: 1px solid rosybrown;
 }
 
+:root {
+  --yellow: #fcdc4d;
+  --navy: #313d5a;
+  --coral: #f0544f;
+  --dark-teal: #183642;
+  --cream: #fdf0d5;
+  --shadow: rgba(24, 54, 66, 0.1);
+  --shadow-hover: rgba(24, 54, 66, 0.2);
+}
 
 body {
     display: grid;
@@ -20,6 +29,7 @@ body {
     grid-template-rows: auto auto auto 1fr;
     background-color: aquamarine;
     padding: 20px;
+    background-color: ;
 }
 
 .sidebar-title {
@@ -89,7 +99,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
-
 .Announcements {
   overflow: scroll;
 }
