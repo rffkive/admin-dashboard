@@ -48,13 +48,26 @@ body {
 
 .main-container {
     height: 100vh;
-    overflow: scroll;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .header {
     display: grid;
     grid-template-rows:auto auto;
     background-color: crimson;
+    grid-area: 1 / 1 / 2 / 6;
+}
+
+.projects-section {
+  grid-area: 2 / 1 / 5 / 4;
+      overflow: scroll;
+}
+
+.content-sidebar {
+  grid-area: 2 / 4 / 5 / 6;
+      overflow: scroll;
 }
 
 .search-section {
@@ -70,4 +83,3 @@ body {
     align-items: center;
     gap: 20px;
 }
-
