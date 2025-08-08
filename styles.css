@@ -26,14 +26,13 @@ body {
 .sidebar {
     display: grid;
     grid-template-rows: auto auto auto 1fr;
-    padding: 20px;
+    padding:1.25rem;
     background-color: var(--navy);
     color: var(--cream);
 }
 
 .sidebar-title {
-    padding: 20px;
-    font-size: 24px;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
     font-weight: 700;
     text-align: center;
     color: whitesmoke;
@@ -43,19 +42,17 @@ body {
     list-style: none;
     display: grid;
     grid-template-rows: repeat(6, auto);
-    gap: 7px;
-    margin: 20px 0;
+    margin: 1.5rem 0;
 }
 
 .sidebar-navigation {
     list-style: none;
     display: grid;
     grid-template-rows: repeat(3, auto);   
-    gap: 7px;
 }
 
 .sidebar-navigation li, .sidebar-branding li {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   transition: all 0.3s ease;
 }
 
@@ -68,9 +65,9 @@ body {
     color: var(--cream);
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 7px 15px;
-    border-radius: 8px;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
     transition: all 0.3s ease;
     font-weight: 500;
     font-size: 18px;
@@ -98,8 +95,17 @@ body {
 .header {
     display: grid;
     grid-template-rows:auto auto;
-    background-color: crimson;
+    background-color: var(--cream);
     grid-area: 1 / 1 / 2 / 6;
+}
+.search-form {
+  display: flex;
+}
+
+.search-input {
+  margin: 0 1rem;
+  border-radius: 13px;
+  width: 100%;
 }
 
 .projects-section {
