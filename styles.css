@@ -21,7 +21,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr auto;
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Nunito", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -31,6 +31,7 @@ body {
     padding:1.25rem;
     background-color: var(--navy);
     color: var(--cream);
+    width: 235px;
 }
 
 .sidebar-title {
@@ -60,6 +61,7 @@ body {
 
 .sidebar-navigation li:hover, .sidebar-branding li:hover {
   background-color: var(--yellow);
+  cursor: pointer;
 }
 
 .sidebar-navigation a, .sidebar-branding a {
@@ -86,6 +88,7 @@ body {
   color: var(--dark-teal);
   font-family: 'Kalam', cursive;
   font-weight: 600;
+  cursor: pointer;
 }
 .main-container {
     min-height: 100vh;
@@ -342,6 +345,7 @@ h4 {
 
   .announcement-container:hover{
     transform: scale(1.05);
+    cursor: initial;
   }
 
   .announcement.mid {
@@ -390,14 +394,25 @@ h4 {
     border: 1px solid black;
   }
 
+  .trending-avatar:hover {
+    transform: scale(1.20);
+    border: 3px dotted rgb(4, 63, 2);
+  }
+
   .trending-username {
     font-size: 1rem;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     color: var(--dark-teal);
+    transition: all 0.3s ease;
   }
 
   .trending-project {
     color: rgba(65, 63, 63, 0.9);
     font-size: 0.8rem;
+  }
+
+  .trending-username:hover {
+    text-decoration: underline;
+    cursor: pointer;
   }
