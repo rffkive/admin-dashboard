@@ -123,20 +123,6 @@ body {
   color: var(--dark-teal);
 }
 
-.projects-section {
-  grid-area: 2 / 1 / 5 / 5;
-  background-color: rgb(223, 225, 226);
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
-
-.content-sidebar {
-  grid-area: 2 / 5 / 5 / 6;
-  display: grid;
-  grid-template-rows: auto auto;
-  background-color: rgb(223, 225, 226);
-}
-
 .search-section {
     display: grid;
     grid-template-columns: 1fr auto auto auto;
@@ -159,7 +145,7 @@ body {
     gap: 1.5rem;
     padding: 0.75rem 0;
 }
-
+  
 .user-profile-btn {
     position: relative;
     border-radius: 50%;
@@ -259,8 +245,15 @@ body {
   overflow: auto;
 }
 
+.projects-section {
+    grid-area: 2 / 1 / 5 / 5;
+    background-color: rgb(223, 225, 226);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 1.5rem;
+}
+
 .project-title {
-    padding: 0.5rem 1.5rem;
     padding-bottom: 0;
     font-size: 1.5rem;
     font-weight: 800;
@@ -270,7 +263,6 @@ body {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    padding: 1.5rem;
     padding-top: 0.5rem;
     gap: 1rem;
     width: 100%;
@@ -316,4 +308,12 @@ h4 {
     background-color: var(--yellow);   
     transition: all 0.4s ease; 
     transform: scale(1.25);
+  }
+
+  .content-sidebar {
+    grid-area: 2 / 5 / 5 / 6;
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: rgb(223, 225, 226);
+
   }
