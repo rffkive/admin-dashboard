@@ -332,9 +332,14 @@ h4 {
     box-shadow: 0 4px 15px var(--shadow-hover);
   }
 
-  .announcement {
+  .announcement-container {
     display: grid;
     grid-template-rows: repeat(2, auto);
+    transition: all 0.3s ease;
+  }
+
+  .announcement-container:hover{
+    transform: scale(1.05);
   }
 
   .announcement.mid {
