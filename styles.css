@@ -88,19 +88,26 @@ body {
   font-weight: 600;
 }
 .main-container {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: auto auto repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto 1fr;
+    max-width: 100%;
 }
 
 .header {
+    position: relative;     
     display: grid;
-    grid-template-rows:auto auto;
+    grid-template-rows: auto auto;
     background-color: white;
     grid-area: 1 / 1 / 2 / 6;
     padding: 1rem 2rem;
-}
+    box-shadow:
+      0 4px 6px rgba(0,0,0,0.12),
+      0 12px 24px rgba(0,0,0,0.16);
+  }
+  
+
 .search-form {
   display: flex;
 }
@@ -117,15 +124,14 @@ body {
 
 .projects-section {
   grid-area: 2 / 1 / 5 / 5;
-  overflow: auto;
-  background-color: gray;
+  background-color: rgb(223, 225, 226);
 }
 
 .content-sidebar {
   grid-area: 2 / 5 / 5 / 6;
   display: grid;
   grid-template-rows: auto auto;
-  background-color: gray;
+  background-color: rgb(223, 225, 226);
 }
 
 .search-section {
@@ -242,10 +248,6 @@ body {
     cursor: pointer;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-}
 .Announcements {
   overflow: auto;
 }
@@ -253,3 +255,62 @@ body {
 .Trending { 
   overflow: auto;
 }
+
+.project-title {
+    padding: 0.5rem 1.5rem;
+    padding-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: "Poppins", sans-serif;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 1.5rem;
+    padding-top: 0.5rem;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+.project-card {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px var(--shadow-hover);
+    border-left: 3px solid #490a1d;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: var(--yellow);
+    transform: translateY(-3%);
+}
+
+.project-actions {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.project-actions button {
+    border: none;
+}
+
+.project-card:hover .project-actions button {
+    background-color: var(--yellow);   
+    transition: all 0.4s ease; 
+    transform: scale(1.25);
+  }
